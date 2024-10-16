@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>庆方云音乐</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body1>
+    <h3 class="time-display"></h3>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1; // getMonth() returns 0-11, so add 1
+            var day = now.getDate();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+
+            // Pad single digits with leading zero
+            month = ('0' + month).slice(-2);
+            day = ('0' + day).slice(-2);
+            hour = ('0' + hour).slice(-2);
+            minute = ('0' + minute).slice(-2);
+            second = ('0' + second).slice(-2);
+
+            // Display the time in YYYY-MM-DD HH:mm:ss format
+            var timeString = '' + year + '年' + month + '月' + day + '日 ' + hour + ':' + minute + ':' + second;
+            document.querySelector('.time-display').innerText = timeString;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+    </script>
+</body1>
+
+<body>
+
+<div class="player">
+   <button onclick="window.location.href='https://music.qingfangcomputer.top'">返回首页</button>
+    <img src="cover.jpg" alt="Album Cover" id="album-cover">
+    
+    <h2 id="song-title">多幸运</h2>
+    <p id="artist-name">无艺术家</p>
+    
+    <!-- 控制面板 -->
+  
+  <!-- 进度条 -->
+  
+  <!-- 音频源 -->
+    <audio id="audio-player" controls preload="none">
+        <source src="music/多幸运.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+<div id="lyric-content"></div>
+</div>
+
+<!-- 添加歌词容器 -->
+
+<script src="js/多幸运.js"></script>
+
+</body>
+</html>
