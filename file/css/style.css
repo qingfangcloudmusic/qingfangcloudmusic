@@ -1,0 +1,39 @@
+body1 {
+            font-family: Arial, sans-serif;
+        }
+        .time-display {
+            position: fixed;
+            left: 30px;
+            top: 50px;
+            z-index: 1000;
+        }
+
+.player {
+    width: 60%;
+    margin: auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#album-cover {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.controls button,
+#volume-control {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+#lyric-content {
+	text-align: right;
+	font-size: 55px;
+    height: 200px;
+    overflow-y: auto;
+}
